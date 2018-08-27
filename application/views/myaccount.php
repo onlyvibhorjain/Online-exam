@@ -20,18 +20,6 @@
 			echo $this->session->flashdata('message');	
 		}
 		?>	
-		
-				<div class="form-group">	 
-				<?php echo $this->lang->line('group_name');?>: <?php echo $result['group_name'];?> (<?php echo $this->lang->line('price_');?>: <?php echo $result['price'];?>)
-				
-				<?php 
-				if($this->config->item('allow_switch_group')){
-				?>
-<a href="<?php echo site_url('user/switch_group');?>" class="btn btn-danger"><?php echo $this->lang->line('change_group');?></a>
-				<?php 
-				}
-				?>
-				</div>
 				
 				
 				<div class="form-group">	 
@@ -67,53 +55,4 @@
 </div>
       </form>
 </div>
-
-
-
-<div class="row">
-<div class="col-md-8">
-<h3><?php echo $this->lang->line('payment_history');?></h3>
-<table class="table table-bordered">
-<tr>
- <th><?php echo $this->lang->line('payment_gateway');?></th>
-<th><?php echo $this->lang->line('paid_date');?> </th>
-<th><?php echo $this->lang->line('amount');?></th>
-<th><?php echo $this->lang->line('transaction_id');?> </th>
-<th><?php echo $this->lang->line('status');?> </th>
-</tr>
-<?php 
-if(count($payment_history)==0){
-	?>
-<tr>
- <td colspan="5"><?php echo $this->lang->line('no_record_found');?></td>
-</tr>	
-	
-	
-	<?php
-}
-foreach($payment_history as $key => $val){
-?>
-<tr>
- <td><?php echo $val['payment_gateway'];?></td>
- <td><?php echo date('Y-m-d H:i:s',$val['paid_date']);?></td>
- <td><?php echo $val['amount'];?></td>
- <td><?php echo $val['transaction_id'];?></td>
- <td><?php echo $val['payment_status'];?></td>
- 
-</tr>
-
-<?php 
-}
-?>
-</table>
-
-</div>
-
-</div>
-
-
- 
-
-
-
 </div>

@@ -15,7 +15,9 @@
 	<div class="login-panel panel panel-default">
 		<div class="panel-body"> 
 		<center>
-		<a href="<?php echo base_url();?>"><img src="<?php echo base_url('images/logo.png');?>"></a><br>
+		<!-- <a href="<?php echo base_url();?>"><img src="<?php echo base_url('images/logo.png');?>"></a> -->
+<a href="https://www.ziggletech.com/"><img src="<?php echo base_url('images/logo.png');?>"></a>
+		<br>
 <?php echo $this->lang->line('login_tagline');?>
 		</center>
 

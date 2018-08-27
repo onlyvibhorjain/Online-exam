@@ -2,7 +2,7 @@
 
    
  <h3><?php echo $title;?></h3>
-   
+ 	<p class="note"> <strong>* NOTE -</strong> <span>Please don't switch to another window / tab and don't try to press F12, Ctrl keys. It'll be cause of your disqualification.</span></p>   
  
 
   <div class="row">

@@ -811,10 +811,11 @@ function update_check(sq_version){
 			url: "http://update.savsoftquiz.com/",
 		success: function(data){
 			if(data.trim()==sq_version){
-			var msg="<div class='alert alert-success'>You are using updated version of <a href='http://savsoftquiz.com'>Savsoft Quiz "+sq_version+"</a></div>";	
+			// var msg="<div class='alert alert-success'>You are using updated version of <a href='http://savsoftquiz.com'>Savsoft Quiz "+sq_version+"</a></div>";	
+			var msg="<div class='alert alert-success'>You are using updated version of <a href='http://ziggletech.com'>Ziggle Tech "+sq_version+"</a></div>";	
 			}else{
-			var msg="<div class='alert alert-danger'>New version available: Savsoft Quiz v"+data.trim()+". You are using outdated version of Savsoft Quiz v"+sq_version+". Visit <a href='http://savsoftquiz.com'>www.savsoftquiz.com</a> to download</div>";	
-				
+			// var msg="<div class='alert alert-danger'>New version available: Savsoft Quiz v"+data.trim()+". You are using outdated version of Savsoft Quiz v"+sq_version+". Visit <a href='http://savsoftquiz.com'>www.savsoftquiz.com</a> to download</div>";	
+			var msg="<div class='alert alert-danger'>New version available: Ziggle Tech v"+data.trim()+". You are using outdated version of Ziggle Tech v"+sq_version+". Visit <a href='http://savsoftquiz.com'>www.ziggletech.com</a> to download</div>";		
 			}
 			if(!document.getElementById("update_notice")){
 				$('body').prepend(msg);

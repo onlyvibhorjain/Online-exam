@@ -45,7 +45,9 @@
 			echo $this->session->flashdata('message');	
 		}
 		?>	
-	<div class="alert alert-warning"> Online Payment Gateway only support with '<a href="https://savsoftquiz.com/?ref=<?php echo base_url();?>">Savsoft Quiz Enterprise  Version</a>'. Enterprise version support Paypal, 2Checkout, Payumoney and Paytm gateway(s)</div>
+	<!-- <div class="alert alert-warning"> Online Payment Gateway only support with '<a href="https://savsoftquiz.com/?ref=<?php echo base_url();?>">Savsoft Quiz Enterprise  Version</a>'. Enterprise version support Paypal, 2Checkout, Payumoney and Paytm gateway(s)</div>
+   -->
+   <div class="alert alert-warning"> Online Payment Gateway only support with '<a href="https://ziggletech.com/?ref=<?php echo base_url();?>">Ziggle Tech Enterprise  Version</a>'. Enterprise version support Paypal, 2Checkout, Payumoney and Paytm gateway(s)</div>
 	
  
 <table class="table table-bordered">

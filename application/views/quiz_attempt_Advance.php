@@ -6,13 +6,11 @@
 		font-size:14px;
 		padding:4px;
 	}
-	
+	.container{margin:0; width: 100%;}
 .question_div{
  
 width: 100%;
 height: 100%;
-position: fixed;
-z-index: 1000;
 background: #ffffff;
 top: 0px;
 left: 0px;
@@ -102,14 +100,6 @@ window.location="<?php echo site_url('quiz/submit_quiz/');?>";
 
 <div class="container" >
 
-
-
-
-
- 
-	
-<div style="clear:both;"></div>
-
 <!-- Category button -->
 
  <div class="row" style="display:none;" >
@@ -136,10 +126,67 @@ function getfirstqn($cat_keys='0',$category_range){
 ?>
 </div> 
 
-   
+     <div class="col-md-12" style="padding: 0px;">
+<div class="rightpanel" style="float:left; width:100%;display:block; margin:0px;position:inherit;background:#ffffff;right:0px;padding:5px;border:1px solid #eeeeee;" >
+	<div class="col-md-4">
+		Time left: <span id='timer' >
+		<script type="text/javascript">window.onload = CreateTimer("timer", <?php echo $seconds;?>);</script>
+		</span>
+	</div>
+
+	<div class="col-md-4" style="text-align: center;">
+		<?php if(count($categories) > 1 ){
+		$jct=0;
+		foreach($categories as $cat_key => $category){
+		?>
+			<a href="javascript:switch_category('cat_<?php echo $cat_key;?>');"   class="btn btn-default btn-sm"  style="cursor:pointer;color:#666666;"><?php echo $category;?></a>
+			<input type="hidden" id="cat_<?php echo $cat_key;?>" value="<?php echo getfirstqn($cat_key,$category_range);?>">
+		<?php 
+		}
+		}?>
+	</div>
+
+	<div class="col-md-4">
+		<table>
+		<tr><td style="font-size:10px;"><div class="qbtn" style="background:#449d44;width:20px;height:20px;">&nbsp;</div> <?php echo $this->lang->line('Answered');?>  </td>
+		<td style="font-size:10px;"><div class="qbtn" style="background:#c9302c;width:20px;height:20px;">&nbsp;</div> <?php echo $this->lang->line('UnAnswered');?>  </td>
+		<td style="font-size:10px;"><div class="qbtn" style="background:#ec971f;width:20px;height:20px;">&nbsp;</div> <?php echo $this->lang->line('Review-Later');?>  </td>
+		<td style="font-size:10px;"><div class="qbtn" style="background:#212121;width:20px;height:20px;">&nbsp;</div> <?php echo $this->lang->line('Not-visited');?>  </td></tr>
+		</table>
+	</div>
+
+	<div class="col-md-12">
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<a data-toggle="collapse" href="#collapse1">
+					<div class="panel-heading">
+						<h4 class="panel-title" style="color: #000">
+						<!-- <?php echo $this->lang->line('questions');?> -->
+						Jump to another Question.
+						</h4>
+					</div>
+				</a>
+			<div id="collapse1" class="panel-collapse collapse">
+				<div class="panel-body">
+					<?php 
+						for($j=0; $j < $quiz['noq']; $j++ ){
+							?>
+							
+							<div class="qbtn" onClick="javascript:show_question('<?php echo $j;?>');" id="qbtn<?php echo $j;?>" ><?php echo ($j+1);?></div>
+							
+							<?php 
+						}
+						?>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+ </div>
  
- <div class="row"  style="margin-top:5px;">
- <div class="col-md-8">
+ <div class="row"  style="float: left;width: 100%;">
+ <div class="col-md-12">
 <form method="post" action="<?php echo site_url('quiz/submit_quiz/'.$quiz['rid']);?>" id="quiz_form" >
 <input type="hidden" name="rid" value="<?php echo $quiz['rid'];?>">
 <input type="hidden" name="noq" value="<?php echo $quiz['noq'];?>">
@@ -165,7 +212,7 @@ foreach($questions as $qk => $question){
  <div id="q<?php echo $qk;?>" class="question_div">
 		
 		<div class="question_container"  
-		style="height:auto;background:#eeeeee;padding:4px;margin:5px;border:1px solid #dddddd;">
+		style="height:auto;background:#eeeeee;padding:4px;padding-left: 18px;margin:5px;border:1px solid #dddddd;">
 		 <?php echo $this->lang->line('question');?> <?php echo $qk+1;?>)<br>
 		 <?php echo $question['question'];?>
 		 
@@ -241,23 +288,23 @@ foreach($questions as $qk => $question){
 
 		 if($question['question_type']==$this->lang->line('short_answer')){
 			 			 $save_ans="";
-			 foreach($saved_answers as $svk => $saved_answer){
-				 if($question['qid']==$saved_answer['qid']){
-					$save_ans=$saved_answer['q_option'];
+				 foreach($saved_answers as $svk => $saved_answer){
+					 if($question['qid']==$saved_answer['qid']){
+						$save_ans=$saved_answer['q_option'];
+					 }
 				 }
-			 }
-			 ?>
-			 <input type="hidden"  name="question_type[]"  id="q_type<?php echo $qk;?>" value="3" >
-			 <?php
-			 ?>
-			 
-		<div class="op"> 
-		<?php echo $this->lang->line('answer');?> 
-		<input type="text" name="answer[<?php echo $qk;?>][]" value="<?php echo $save_ans;?>" id="answer_value<?php echo $qk;?>"   >  
-		</div>
-			 
-			 
-			 <?php 
+				 ?>
+				 <input type="hidden"  name="question_type[]"  id="q_type<?php echo $qk;?>" value="3" >
+				 <?php
+				 ?>
+				 
+				<div class="op"> 
+				<?php echo $this->lang->line('answer');?> 
+				<input type="text" name="answer[<?php echo $qk;?>][]" value="<?php echo $save_ans;?>" id="answer_value<?php echo $qk;?>"   >  
+				</div>
+				 
+				 
+				 <?php 
 			 
 			 
 		 }
@@ -379,67 +426,8 @@ foreach($questions as $qk => $question){
 ?>
 </form>
  </div>
-  <div class="col-md-4" style="padding-bottom:80px;">
-<div class="rightpanel" style="display:none;z-index:1600; margin:0px;position:absolute;background:#ffffff;right:0px;padding:5px;border:1px solid #eeeeee;" >
-<a id="slideri2" href="#" style="color:#212121;">&times;</a>
-<center>
- <h4><?php echo $title;?></h4>
- 
-	Time left: <span id='timer' >
-	<script type="text/javascript">window.onload = CreateTimer("timer", <?php echo $seconds;?>);</script>
-</span><br><br></center>
-<?php if(count($categories) > 1 ){
-
-	$jct=0;
-	foreach($categories as $cat_key => $category){
-?>
-<a href="javascript:switch_category('cat_<?php echo $cat_key;?>');"   class="btn btn-default btn-sm"  style="cursor:pointer;color:#666666;"><?php echo $category;?></a>
-<input type="hidden" id="cat_<?php echo $cat_key;?>" value="<?php echo getfirstqn($cat_key,$category_range);?>">
-<?php 
-}
-echo "<br><br>";
-}?>
-<b> <?php echo $this->lang->line('questions');?></b>
-	<div>
-		<?php 
-		for($j=0; $j < $quiz['noq']; $j++ ){
-			?>
-			
-			<div class="qbtn" onClick="javascript:show_question('<?php echo $j;?>');" id="qbtn<?php echo $j;?>" ><?php echo ($j+1);?></div>
-			
-			<?php 
-		}
-		?>
-<div style="clear:both;"></div>
-
-	</div>
-	
-	
-	<br>
-	<hr>
-	<br>
-	<div>
-	
-
-	
-<table>
-<tr><td style="font-size:10px;"><div class="qbtn" style="background:#449d44;width:20px;height:20px;">&nbsp;</div> <?php echo $this->lang->line('Answered');?>  </td></tr>
-<tr><td style="font-size:10px;"><div class="qbtn" style="background:#c9302c;width:20px;height:20px;">&nbsp;</div> <?php echo $this->lang->line('UnAnswered');?>  </td></tr>
-<tr><td style="font-size:10px;"><div class="qbtn" style="background:#ec971f;width:20px;height:20px;">&nbsp;</div> <?php echo $this->lang->line('Review-Later');?>  </td></tr>
-<tr><td style="font-size:10px;"><div class="qbtn" style="background:#212121;width:20px;height:20px;">&nbsp;</div> <?php echo $this->lang->line('Not-visited');?>  </td></tr>
-</table>
-
-
-
-	<div style="clear:both;"></div>
-
-	</div>
-</div>
- </div>
- 
  
  </div>
-  
  
 
 
@@ -449,18 +437,16 @@ echo "<br><br>";
 
 
 <div class="footer_buttons">
-	<button class="btn btn-warning"   onClick="javascript:review_later();" style="margin-top:2px;" ><?php echo $this->lang->line('rl');?></button>
+	<button class="btn btn-warning"   onClick="javascript:review_later();" style="margin-top:2px;background: #ec971f; color: #fff;font-weight: 100;font-size: 14px;" ><?php echo $this->lang->line('rl');?></button>
 	
-	<button class="btn btn-info"  onClick="javascript:clear_response();"  style="margin-top:2px;"  ><?php echo $this->lang->line('clear');?></button>
+	<button class="btn btn-info"  onClick="javascript:clear_response();"  style="margin-top:2px; color: #000;font-weight: 100;font-size: 14px;"  ><?php echo $this->lang->line('clear');?></button>
 
-	<button class="btn btn-success"  id="backbtn" style="visibility:hidden;" onClick="javascript:show_back_question();"  style="margin-top:2px;" ><?php echo $this->lang->line('back');?></button>
+	<button class="btn btn-success"  id="backbtn" style="visibility:hidden; color: #fff;background: #337ab7;font-weight: 100;font-size: 14px;" onClick="javascript:show_back_question();"  style="margin-top:2px;" ><?php echo $this->lang->line('back');?></button>
 	
-	<button class="btn btn-success" id="nextbtn" onClick="javascript:show_next_question();" style="margin-top:2px;" ><?php echo $this->lang->line('save_next');?></button>
+	<button class="btn btn-success" id="nextbtn" onClick="javascript:show_next_question();" style="background: #337ab7;margin-top:2px;color: #fff;font-weight: 100;font-size: 14px;" ><?php echo $this->lang->line('save_next');?></button>
 	
-	<button class="btn btn-danger"  onClick="javascript:cancelmove();" style="margin-top:2px;" ><?php echo $this->lang->line('submit_quiz');?></button>
+	<button class="btn btn-danger"  onClick="javascript:cancelmove();" style="background: #337ab7;margin-top:2px;color: #fff;font-weight: 100;font-size: 14px;" ><?php echo $this->lang->line('submit_quiz');?></button>
 </div>
-
-<div style="position:fixed;top:40%;width:80px;cursor:pointer; color:#8A6D3B;height:30px;right:0px;z-index:1200;background:#FCF8E3;padding:5px;border:1px solid #FAEBCC;vertical-align:center" id="slideri"><span class="glyphicons glyphicons-expand"></span> <?php echo $this->lang->line('pallet');?></div>
 
 <script>
 var ctime=0;

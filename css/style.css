@@ -1,4 +1,5 @@
- .login{
+ body{width: 98%;}
+ .login{ 
 background-image:url('../images/bg.jpg');
  background-size:     cover;                      
     background-repeat:   no-repeat;
@@ -26,7 +27,6 @@ img{
 		
 		padding:4px;
 		height:35%;
-		overflow-y:auto;
 		 
 	}
 	.op{
@@ -360,7 +360,8 @@ color:#ffffff;
     #page-signin-forgot-form {
       display: none;
     }
-
+.note span{color: red;}
+.rightpanel .color-sugg{float: right;}
     /* Margins */
 
     .page-signin-modal > .modal-dialog { margin: 30px 10px; }
