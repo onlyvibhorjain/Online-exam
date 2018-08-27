@@ -4,4 +4,4 @@
 		$sq_dbname='online-exam';
 		$sq_dbusername='root';
 		$sq_dbpassword='';
-		?>
+?>
