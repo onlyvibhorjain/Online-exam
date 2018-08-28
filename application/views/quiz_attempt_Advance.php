@@ -148,10 +148,10 @@ function getfirstqn($cat_keys='0',$category_range){
 
 	<div class="col-md-4">
 		<table>
-		<tr><td style="font-size:10px;"><div class="qbtn" style="background:#449d44;width:20px;height:20px;">&nbsp;</div> <?php echo $this->lang->line('Answered');?>  </td>
-		<td style="font-size:10px;"><div class="qbtn" style="background:#c9302c;width:20px;height:20px;">&nbsp;</div> <?php echo $this->lang->line('UnAnswered');?>  </td>
-		<td style="font-size:10px;"><div class="qbtn" style="background:#ec971f;width:20px;height:20px;">&nbsp;</div> <?php echo $this->lang->line('Review-Later');?>  </td>
-		<td style="font-size:10px;"><div class="qbtn" style="background:#212121;width:20px;height:20px;">&nbsp;</div> <?php echo $this->lang->line('Not-visited');?>  </td></tr>
+		<tr><td style="font-size:10px;"><div class="qbtn" style="margin-left: 12px;background:#449d44;width:20px;height:20px;">&nbsp;</div> <p><?php echo $this->lang->line('Answered');?></p></td>
+		<td style="font-size:10px;"><div class="qbtn" style="margin-left: 17px;background:#c9302c;width:20px;height:20px;">&nbsp;</div> <p><?php echo $this->lang->line('UnAnswered');?></p></td>
+		<td style="font-size:10px;"><div class="qbtn" style="margin-left: 24px;background:#ec971f;width:20px;height:20px;">&nbsp;</div> <p><?php echo $this->lang->line('Review-Later');?></p></td>
+		<td style="font-size:10px;"><div class="qbtn" style="margin-left: 12px;background:#212121;width:20px;height:20px;">&nbsp;</div> <p><?php echo $this->lang->line('Not-visited');?></p></td></tr>
 		</table>
 	</div>
 
@@ -212,7 +212,7 @@ foreach($questions as $qk => $question){
  <div id="q<?php echo $qk;?>" class="question_div">
 		
 		<div class="question_container"  
-		style="height:auto;background:#eeeeee;padding:4px;padding-left: 18px;margin:5px;border:1px solid #dddddd;">
+		style="height:auto;background:#5CCAF4;font-size:16px;color:#fff;padding:4px;padding-left: 18px;margin:5px;border:1px solid #dddddd;">
 		 <?php echo $this->lang->line('question');?> <?php echo $qk+1;?>)<br>
 		 <?php echo $question['question'];?>
 		 
