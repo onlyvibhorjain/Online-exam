@@ -25,7 +25,7 @@ $config['dompdf']=true;
 $config['user_registration']=true;
 
 // verify email address ( true or false )
-$config['verify_email']=true;
+$config['verify_email']=false;
 
 // tinymce editor ( true or false )
 $config['tinymce']=true;

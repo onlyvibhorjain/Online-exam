@@ -52,7 +52,7 @@ $logged_in=$this->session->userdata('logged_in');
 <br> 
 			<?php 
 		if($this->session->flashdata('message')){
-			echo $this->session->flashdata('message');	
+			//echo $this->session->flashdata('message');	
 		}
 		?>	
 		<?php 

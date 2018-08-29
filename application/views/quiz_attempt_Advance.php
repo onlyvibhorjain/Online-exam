@@ -1,5 +1,5 @@
- <link rel="stylesheet" href="<?php echo base_url('css/jquery.mobile-1.4.5.min.css');?>">
- <script src="<?php echo base_url('js/jquery.mobile-1.4.5.min.js');?>"></script>
+ <!--<link rel="stylesheet" href="<?php echo base_url('css/jquery.mobile-1.4.5.min.css');?>"> -->
+ <!-- <script src="<?php echo base_url('js/jquery.mobile-1.4.5.min.js');?>"></script> -->
  
  <style>
  td{
@@ -10,7 +10,7 @@
 .question_div{
  
 width: 100%;
-height: 100%;
+height: auto;
 background: #ffffff;
 top: 0px;
 left: 0px;
@@ -439,13 +439,13 @@ foreach($questions as $qk => $question){
 <div class="footer_buttons">
 	<button class="btn btn-warning"   onClick="javascript:review_later();" style="margin-top:2px;background: #ec971f; color: #fff;font-weight: 100;font-size: 14px;" ><?php echo $this->lang->line('rl');?></button>
 	
-	<button class="btn btn-info"  onClick="javascript:clear_response();"  style="margin-top:2px; color: #000;font-weight: 100;font-size: 14px;"  ><?php echo $this->lang->line('clear');?></button>
+	<button class="btn"  onClick="javascript:clear_response();"  style="margin-top:2px; color: #000;font-weight: 100;font-size: 14px;"  ><?php echo $this->lang->line('clear');?></button>
 
-	<button class="btn btn-success"  id="backbtn" style="visibility:hidden; color: #fff;background: #337ab7;font-weight: 100;font-size: 14px;" onClick="javascript:show_back_question();"  style="margin-top:2px;" ><?php echo $this->lang->line('back');?></button>
+	<button class="btn"  id="backbtn" style="visibility:hidden; color: #fff;background: #337ab7;font-weight: 100;font-size: 14px;" onClick="javascript:show_back_question();"  style="margin-top:2px;" ><?php echo $this->lang->line('back');?></button>
 	
-	<button class="btn btn-success" id="nextbtn" onClick="javascript:show_next_question();" style="background: #337ab7;margin-top:2px;color: #fff;font-weight: 100;font-size: 14px;" ><?php echo $this->lang->line('save_next');?></button>
+	<button class="btn" id="nextbtn" onClick="javascript:show_next_question();" style="background: #337ab7;margin-top:2px;color: #fff;font-weight: 100;font-size: 14px;" ><?php echo $this->lang->line('save_next');?></button>
 	
-	<button class="btn btn-danger"  onClick="javascript:cancelmove();" style="background: #337ab7;margin-top:2px;color: #fff;font-weight: 100;font-size: 14px;" ><?php echo $this->lang->line('submit_quiz');?></button>
+	<button class="btn"  onClick="javascript:cancelmove();" style="background: #337ab7;margin-top:2px;color: #fff;font-weight: 100;font-size: 14px;" ><?php echo $this->lang->line('submit_quiz');?></button>
 </div>
 
 <script>

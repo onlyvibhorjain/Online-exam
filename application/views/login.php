@@ -58,18 +58,9 @@ if($this->config->item('user_registration')){
 <?php
 }
 ?>
-	<a href="<?php echo site_url('login/forgot');?>"><?php echo $this->lang->line('forgot_password');?></a>
+	<!-- <a href="<?php echo site_url('login/forgot');?>"><?php echo $this->lang->line('forgot_password');?></a> -->
 
 			</form>
-			
-<?php 
-if($this->config->item('open_quiz')){
-	?>			<p>
-			<a href="<?php echo site_url('quiz/open_quiz/0');?>"  ><?php echo $this->lang->line('open_quizzes');?></a>
-			</p>
-			<?php 
-			}
-			?>
 			
 		</div>
 	</div>
