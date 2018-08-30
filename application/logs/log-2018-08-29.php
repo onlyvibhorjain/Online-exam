@@ -34,3 +34,24 @@ ERROR - 2018-08-29 11:44:01 --> Severity: Warning --> Division by zero C:\wamp64
 ERROR - 2018-08-29 11:57:32 --> Could not find the language line "hello"
 ERROR - 2018-08-29 11:57:32 --> Could not find the language line "user_id"
 ERROR - 2018-08-29 11:57:32 --> Could not find the language line "notattempted"
+ERROR - 2018-08-29 18:15:30 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:20:22 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:20:30 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:21:44 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:23:12 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:24:01 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:24:20 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:24:47 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:25:40 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:26:25 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:29:05 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:29:07 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:29:15 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:30:14 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:30:27 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:30:31 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:35:03 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:36:45 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:45:41 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 18:46:34 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231
+ERROR - 2018-08-29 19:35:23 --> Severity: Warning --> Division by zero C:\xampp\htdocs\savsoftquiz_v4.0_advance-master\application\views\dashboard.php 231

@@ -2,7 +2,7 @@
 
    
  <h3><?php echo $title;?></h3>
- 	<p class="note"> <strong>* NOTE -</strong> <span>Please don't switch to another window / tab and don't try to press F12, Ctrl keys. It'll be cause of your disqualification.</span></p>   
+ 	<p class="note"> <strong>* NOTE -</strong> <span>Please don't switch to another window / tab and don't try to press F12, Ctrl keys. It'll be cause of your disqualification.</span><br><span style="padding-left: 60px;">There is no negative marking for wrong answers.</span></p>   
  
 
   <div class="row">
@@ -26,10 +26,10 @@
 <tr><td><?php echo $this->lang->line('start_date');?></td><td><?php echo date('Y-m-d H:i:s',$quiz['start_date']);?></td></tr>
 <tr><td><?php echo $this->lang->line('end_date');?></td><td><?php echo date('Y-m-d H:i:s',$quiz['end_date']);?></td></tr>
 <tr><td><?php echo $this->lang->line('duration');?></td><td><?php echo $quiz['duration'];?></td></tr>
-<tr><td><?php echo $this->lang->line('maximum_attempts');?></td><td><?php echo $quiz['maximum_attempts'];?></td></tr>
+<tr><td><?php echo $this->lang->line('maximum_attempts');?></td><td><?php echo $quiz['maximum_attempts'];?></td></tr><!-- 
 <tr><td><?php echo $this->lang->line('pass_percentage');?></td><td><?php echo $quiz['pass_percentage'];?></td></tr>
 <tr><td><?php echo $this->lang->line('correct_score');?></td><td><?php echo $quiz['correct_score'];?></td></tr>
-<tr><td><?php echo $this->lang->line('incorrect_score');?></td><td><?php echo $quiz['incorrect_score'];?></td></tr>
+<tr><td><?php echo $this->lang->line('incorrect_score');?></td><td><?php echo $quiz['incorrect_score'];?></td></tr> -->
 
 </table>
   

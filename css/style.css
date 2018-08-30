@@ -7,7 +7,7 @@ background-image:url('../images/bg.jpg');
 }
 
 .container{
-	padding:5px;
+	padding:65px 0 0 0;
 }
 
 img{
@@ -283,8 +283,11 @@ color:#ffffff;
 }
 
 .navbar-default {
-    background-color: #3D4A5D;
+    background-color: #2078BE;
     border-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    z-index: 9;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -309,22 +312,6 @@ color:#ffffff;
     border-bottom: 1px solid #E2E2E2;
     background: none repeat scroll 0% 0% #FAFAFA;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     .page-signin-modal {
       position: relative;
@@ -370,6 +357,28 @@ color:#ffffff;
     /* Margins */
 
     .page-signin-modal > .modal-dialog { margin: 30px 10px; }
+
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #E97229 !important;
+    background-color: #ffffff !important;
+}
+
+.dropdown-menu>li>a {
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	font-weight: 400;
+	line-height: 1.42857143;
+	color: #E97229 !important;
+	white-space: nowrap;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: #E97230;
+}
+.navbar-default .navbar-brand:hover{color: #fff}
+.nav.navbar-nav li:hover{color: #fff; background-color: #E97230;}
 
     @media (min-width: 544px) {
       .page-signin-modal > .modal-dialog { margin: 60px auto; }

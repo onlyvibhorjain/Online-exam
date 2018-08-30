@@ -1,5 +1,5 @@
 <div class="row"  style="border-bottom:1px solid #dddddd;">
-<div class="container"  >
+<div class="container" style="padding: 0px;" >
 <div class="col-md-1">
 </div>
 <div class="col-md-10">
@@ -13,7 +13,7 @@
 
 </div>
 
- <div class="container">
+ <div class="container" style="padding: 0px;">
 
    
  <h3><?php echo $title;?></h3>
