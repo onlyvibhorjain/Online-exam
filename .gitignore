@@ -1,4 +1,2 @@
-*.log
-**/logs
-**/application/logs
-**/sq_config.php
+application/logs/*
+application/config/sq_config.php
