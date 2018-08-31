@@ -10,6 +10,11 @@
 
 <script>
 var countKeyPressed = 1;
+document.onselectstart = function()
+{
+    window.getSelection().removeAllRanges();
+};
+
 document.onkeydown = function (e) {
 	var msg = false;
     e = e || window.event;//Get event
@@ -379,7 +384,7 @@ if(count($categories) > 1 ){
  
  <div class="row"  style="margin-top:5px;">
  <div class="col-md-8">
-<form method="post" action="<?php echo site_url('quiz/submit_quiz/'.$quiz['rid']);?>" id="quiz_form" >
+<form method="post" class="unselectable" action="<?php echo site_url('quiz/submit_quiz/'.$quiz['rid']);?>" id="quiz_form" >
 <input type="hidden" name="rid" value="<?php echo $quiz['rid'];?>">
 <input type="hidden" name="noq" value="<?php echo $quiz['noq'];?>">
 <input type="hidden" name="individual_time"  id="individual_time" value="<?php echo $quiz['individual_time'];?>">
