@@ -9,7 +9,34 @@
 
 
 <script>
-
+var countKeyPressed = 1;
+document.onkeydown = function (e) {
+	var msg = false;
+    e = e || window.event;//Get event
+	if (e.keyCode == 123) { // Prevent F12
+        return false;
+    } else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) { // Prevent Ctrl+Shift+I 
+		msg = true;
+    }else if((e.which == 85) || (e.which == 67) && e.ctrlKey)
+	{
+		msg = true;
+	}
+	if(msg){
+		if(countKeyPressed<4){
+			countKeyPressed ++;
+			alert("Un-authorize key pressed. It may cause to disqualification.");
+			return false;
+		}
+		else{
+			alert("You are disqualified");
+			window.location="<?php echo site_url('quiz/submit_quiz/');?>";
+			return false;
+		}
+	}
+};
+$(document).on("contextmenu", function (e) {        
+    e.preventDefault();
+});
 var Timer;
 var TotalSeconds;
 
