@@ -324,7 +324,7 @@ window.location="<?php echo site_url('quiz/submit_quiz/');?>";
 	});
 </script>
 
-<div class="container" >
+<div class="container" style="padding-top:0px;">
 <div class="save_answer_signal" id="save_answer_signal2"></div>
 <div class="save_answer_signal" id="save_answer_signal1"></div>
 
@@ -720,7 +720,7 @@ foreach($questions as $qk => $question){
   <div class="col-md-4" style="padding-bottom:80px;">
 
 <b> <?php echo $this->lang->line('questions');?></b>
-	<div style="overflow-y:scroll;height:20%;">
+	<div>
 		<?php 
 		for($j=0; $j < $quiz['noq']; $j++ ){
 			?>
